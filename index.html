@@ -26,10 +26,11 @@
     <img class="hidden md:block md:object-cover md:h-full md:w-full lg:hidden" src="assets/home/background-home-tablet.jpg" alt="earth">
     <img class="hidden lg:block lg:object-cover lg:h-full lg:w-full" src="assets/home/background-home-desktop.jpg" alt="earth">
 </div>
-<header class="relative flex items-center justify-between">
-    <div class="pl-6 py-6">
+<header class="relative flex items-center justify-between lg:pt-10">
+    <div class="pl-6 py-6 lg:pl-14 shrink-0">
         <img class="w-10 h-10 md:w-12 md:h-12" src="assets/shared/logo.svg" alt="logo">
     </div>
+    <div class="hidden lg:relative lg:z-10 lg:block lg:h-px lg:bg-white/25 lg:w-full lg:ml-16 lg:-mr-8"></div>
     <div class="md:hidden" x-data="{menu: false}">
         <button class="pr-6 py-6" @click="menu = true" x-show="!menu" x-transition.opacity>
             <img src="assets/shared/icon-hamburger.svg" alt="open menu">
@@ -105,38 +106,42 @@
             </div>
         </div>
     </div>
-    <div class="hidden md:block md:px-12 md:pt-10 md:min-h-full md:backdrop-blur-[30px] md:saturate-[1.25] md:bg-white/[0.04]">
-        <nav class="">
-            <ul class="text-white font-sub flex items-center justify-between gap-9">
+    <div class="hidden md:block md:px-12 md:pt-10 md:min-h-full md:backdrop-blur-[30px] md:saturate-[1.25] md:bg-white/[0.04] lg:pl-[123px] lg:pr-[165px]">
+        <nav>
+            <ul class="text-white font-sub flex items-center justify-between gap-9 lg:gap-12">
                 <li>
                     <a
-                        class="pb-8 flex items-center gap-1 border-b-[3px] border-white"
+                        class="pb-8 flex items-center gap-2 border-b-[3px] border-white"
                         href="#"
                     >
+                        <strong class="font-sub uppercase tracking-[2.7px] leading-[19px] w-5 md:hidden lg:block">00</strong>
                         <span class="text-sm font-sub uppercase tracking-[2.7px] leading-[19px]">Home</span>
                     </a>
                 </li>
                 <li>
                     <a
-                        class="pb-8 flex items-center gap-1 border-b-[3px] border-transparent"
+                        class="pb-8 flex items-center gap-2 border-b-[3px] border-transparent"
                         href="/destination-europa.html"
                     >
+                        <strong class="font-sub uppercase tracking-[2.7px] leading-[19px] w-5 md:hidden lg:block">01</strong>
                         <span class="text-sm font-sub uppercase tracking-[2.7px] leading-[19px]">Destination</span>
                     </a>
                 </li>
                 <li>
                     <a
-                        class="pb-8 flex items-center gap-1 border-b-[3px] border-transparent"
+                        class="pb-8 flex items-center gap-2 border-b-[3px] border-transparent"
                         href="/crew-commander.html"
                     >
+                        <strong class="font-sub uppercase tracking-[2.7px] leading-[19px] w-5 md:hidden lg:block">02</strong>
                         <span class="text-sm font-sub uppercase tracking-[2.7px] leading-[19px]">Crew</span>
                     </a>
                 </li>
                 <li>
                     <a
-                        class="pb-8 flex items-center gap-1 border-b-[3px] border-transparent"
+                        class="pb-8 flex items-center gap-2 border-b-[3px] border-transparent"
                         href="/technology-capsule.html"
                     >
+                        <strong class="font-sub uppercase tracking-[2.7px] leading-[19px] w-5 md:hidden lg:block">03</strong>
                         <span class="text-sm font-sub uppercase tracking-[2.7px] leading-[19px]">Technology</span>
                     </a>
                 </li>
@@ -145,28 +150,24 @@
     </div>
 </header>
 
-<main class="relative">
-    <div class="text-white text-center mt-6 pt-2.5 px-6 space-y-4 md:mt-24">
-        <!-- heading 5 -->
-        <p class="text-blue font-sub uppercase tracking-[2.7px] leading-[19px] md:text-xl md:tracking-[3.38px] md:leading-[24px]">
+<main class="relative lg:flex lg:max-w-6xl lg:mx-auto lg:justify-between lg:items-end lg:mt-36 lg:pt-2.5">
+    <div class="text-white text-center mt-6 pt-2.5 px-6 space-y-4 md:mt-24 lg:text-left">
+        <p class="text-blue font-sub uppercase tracking-[2.7px] leading-[19px] md:text-xl md:tracking-[3.38px] md:leading-[24px] lg:text-[28px] lg:tracking-[4.73px] lg:leading-[34px]">
             So, you want to travel to
         </p>
-        <!-- heading 1 -->
-        <h1 class="text-[80px] font-heading leading-[100px] uppercase md:text-[150px] md:leading-[150px]">
+        <h1 class="text-[80px] font-heading leading-[100px] uppercase md:text-[150px] md:leading-[150px] lg:leading-[172px]">
             Space
         </h1>
-        <!-- body -->
-        <p class="text-blue text-[15px] leading-[25px] md:text-base md:leading-[28px] md:max-w-md md:px-0.5 md:mx-auto">
+        <p class="text-blue text-[15px] leading-[25px] max-w-sm mx-auto md:text-base md:leading-[28px] md:max-w-md md:px-0.5 lg:mx-0 lg:text-lg lg:leading-8 lg:pr-1">
             Let’s face it; if you want to go to space, you might as well genuinely go to
             outer space and not hover kind of on the edge of it. Well sit back, and relax
             because we’ll give you a truly out of this world experience!
         </p>
     </div>
-    <div class="px-6 mt-20 pt-px flex justify-center md:mt-36 md:pt-3">
-        <!-- heading 4-->
-        <button class="w-[150px] h-[150px] rounded-full bg-white text-dark grid place-content-center md:w-[242px] md:h-[242px] lg:w-[274px] lg:h-[274px] lg:hover:ring-[88px] lg:hover:ring-white/10 lg:ease-in-out lg:duration-300">
+    <div class="px-6 mt-20 pt-px flex justify-center md:mt-36 md:pt-3 lg:px-0">
+        <a href="/technology-capsule.html" class="w-[150px] h-[150px] rounded-full bg-white text-dark grid place-content-center md:w-[242px] md:h-[242px] lg:w-[274px] lg:h-[274px] lg:hover:ring-[88px] lg:hover:ring-white/10 lg:ease-in-out lg:duration-500">
             <span class="text-xl font-heading uppercase tracking-[1.25px] leading-[23px] md:text-[32px] md:tracking-[2px]">Explore</span>
-        </button>
+        </a>
     </div>
 </main>
 
