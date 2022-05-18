@@ -23,6 +23,7 @@ tailwind.config = {
                 '32': '32px',
                 '56': '56px',
                 '80': '80px',
+                '100': '100px',
                 '150': '150px',
             },
             lineHeight: {
@@ -33,6 +34,7 @@ tailwind.config = {
                 'md': '34px',
                 '65': '65px',
                 '92': '92px',
+                '115': '115px',
                 'lg': '100px',
                 'xl': '150px',
                 'xxl': '172px',
