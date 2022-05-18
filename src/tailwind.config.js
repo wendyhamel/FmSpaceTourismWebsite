@@ -6,8 +6,22 @@ tailwind.config = {
             'sub': ['Barlow Condensed', 'sans-serif'],
         },
         extend: {
+            spacing: {
+                '123': '123px',
+                '150': '150px',
+                '165': '165px',
+                '242': '242px',
+                '274': '274px'
+            },
             borderWidth: {
               '3': '3px',
+            },
+            fontSize: {
+                '15': '15px',
+                '28': '28px',
+                '32': '32px',
+                '80': '80px',
+                '150': '150px',
             },
             lineHeight: {
                 'xxs': '19px',
