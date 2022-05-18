@@ -14,7 +14,7 @@
     <script src="src/tailwind.config.js"></script>
     <script src="style/custom_tailwind.css"></script>
 
-    <!-- Alpine.js for menu  -->
+    <!-- Alpine.js for menu, tabs and content  -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -22,7 +22,7 @@
     <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="relative antialiased">
-<div class="absolute h-screen inset-0">
+<div class="absolute min-h-screen h-full inset-0">
     <img class="object-cover h-full w-full md:hidden" src="assets/destination/background-destination-mobile.jpg" alt="earth">
     <img class="hidden md:block md:object-cover md:h-full md:w-full lg:hidden" src="assets/destination/background-destination-tablet.jpg" alt="earth">
     <img class="hidden lg:block lg:object-cover lg:h-full lg:w-full" src="assets/destination/background-destination-desktop.jpg" alt="earth">
@@ -151,24 +151,47 @@
     </div>
 </header>
 
-<main class="relative lg:flex lg:max-w-6xl lg:mx-auto lg:justify-between lg:items-end lg:mt-36 lg:pt-2.5">
-    Moon
-    Mars
-    Europa
-    Titan
+<main class="relative md:mt-10">
 
-    Europa
+    <h1 class="text-center text-white font-sub uppercase tracking-md leading-xxs md:text-left md:pl-6 md:text-xl md:tracking-lg md:leading-6 lg:text-28 lg:tracking-xl lg:leading-md">
+        <strong class="opacity-25 pr-[15px]">01</strong>Pick your destination
+    </h1>
 
-    The smallest of the four Galilean moons orbiting Jupiter, Europa is a
-    winter lover’s dream. With an icy surface, it’s perfect for a bit of
-    ice skating, curling, hockey, or simple relaxation in your snug
-    wintery cabin.
+    <div class="mt-8">
+        <img class="mb-6 w-170 h-170 mx-auto md:w-80 md:h-80 md:p-2.5" src="assets/destination/image-moon.webp" alt="the moon">
+        <nav class="pt-0.5 mb-5">
+            <ul class="flex justify-center gap-6">
+                <li><button class="text-sm text-blue font-sub uppercase tracking-md leading-xxs pb-2 border-b-3 border-white md:text-base hover:border-white/50 ease-in-out duration-300">Moon</button></li>
+                <li><button class="text-sm text-blue font-sub uppercase tracking-md leading-xxs pb-2 border-b-3 border-transparent md:text-base hover:border-white/50 ease-in-out duration-300">Mars</button></li>
+                <li><button class="text-sm text-blue font-sub uppercase tracking-md leading-xxs pb-2 border-b-3 border-transparent md:text-base hover:border-white/50 ease-in-out duration-300">Europa</button></li>
+                <li><button class="text-sm text-blue font-sub uppercase tracking-md leading-xxs pb-2 border-b-3 border-transparent md:text-base hover:border-white/50 ease-in-out duration-300">Titan</button></li>
+            </ul>
+        </nav>
 
-    Avg. distance
-    628 mil. km
+        <div class="text-center px-6 pb-14">
+            <h2 class="text-white font-heading uppercase text-56 leading-65">
+                Moon
+            </h2>
 
-    Est. travel time
-    3 years
+           <p class="text-blue leading-sm max-w-sm mx-auto">
+               See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+               regain perspective and come back refreshed. While you’re there, take in some history
+               by visiting the Luna 2 and Apollo 11 landing sites.
+           </p>
+
+            <div class="border-t border-gray mt-8 pt-8 space-y-8 pb-0.5">
+                <div class="grid gap-3">
+                    <span class="text-sm text-blue font-sub uppercase tracking-sm leading-xxs md:text-base">Avg. distance</span>
+                    <span class="text-white font-heading uppercase text-28 leading-8">384,400 km</span>
+                </div>
+
+                <div class="grid gap-3">
+                    <span class="text-sm text-blue font-sub uppercase tracking-sm leading-xxs md:text-base">Est. travel time</span>
+                    <span class="text-white font-heading uppercase text-28 leading-8">3 days</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <script src="src/spaceTravel.js"></script>
