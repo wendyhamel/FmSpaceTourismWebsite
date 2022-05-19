@@ -109,6 +109,7 @@ window.spaceTravel = function () {
 
         destinationTab: 'Moon',
         animation: false,
+        crewTab: 'Commander',
 
         get destination() {
             destinationArray = this.destinations.filter(destination => destination.name === this.destinationTab);
@@ -118,6 +119,11 @@ window.spaceTravel = function () {
         animate() {
             this.animation = true;
             setTimeout(function() {this.animation = false}.bind(this) ,1000);
+        },
+
+        get crewMember() {
+            crewMemberArray = this.crew.filter(crewMember => crewMember.role === this.crewTab);
+            return crewMemberArray[0];
         },
 
     }
