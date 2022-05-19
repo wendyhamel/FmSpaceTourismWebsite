@@ -65,7 +65,20 @@ tailwind.config = {
                 blue: '#d0d6f9',
                 dark: '#0b0d17',
             },
-
+            animation: {
+                'destination-image': 'destination-image 1000ms ease-out',
+                'fade': 'fade 750ms ease-out',
+            },
+            keyframes: {
+                'destination-image': {
+                    '0%': { opacity: '0%', transform: 'scale(.9) rotate(8deg)'},
+                    '100%': { opacity: '100%', transform: 'scale(1) rotate(0)'}
+                },
+                'fade': {
+                    '0%': { opacity: '0%', transform: 'scale(.9)'},
+                    '100%': { opacity: '100%', transform: 'scale(1)'}
+                }
+            }
         }
     }
 }
