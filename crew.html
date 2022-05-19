@@ -12,7 +12,6 @@
     <!-- Tailwind play cdn for this challenge ( for development and play purposes ) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="src/tailwind.config.js"></script>
-    <script src="style/custom_tailwind.css"></script>
 
     <!-- Alpine.js for menu, tabs and content  -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -176,11 +175,11 @@
 
             <div class="text-center px-6 pb-14 md:pb-10 mx-auto lg:px-0 lg:text-left lg:mx-0">
                 <div class="grid gap-2 mb-4 lg:mt-36 lg:pt-2.5">
-                    <span class="text-white/50 font-heading uppercase leading-[18px] md:text-2xl md:leading-7 lg:text-32 lg:leading-[37px]" :class="{'animate-fade lg:origin-top-left' :animation}" x-text="crewMember.role"></span>
-                    <h2 class="text-white font-heading uppercase text-2xl leading-7 md:text-40 md:leading-46 lg:text-56 lg:leading-65" :class="{'animate-fade lg:origin-top-left' :animation}" x-text="crewMember.name"></h2>
+                    <span class="text-white/50 font-heading uppercase leading-[18px] md:text-2xl md:leading-7 lg:text-32 lg:leading-[37px]" :class="{'animate-fade lg:origin-top-left' : animation}" x-text="crewMember.role"></span>
+                    <h2 class="text-white font-heading uppercase text-2xl leading-7 md:text-40 md:leading-46 lg:text-56 lg:leading-65" :class="{'animate-fade lg:origin-top-left' : animation}" x-text="crewMember.name"></h2>
                 </div>
 
-                <p class="text-blue text-15 leading-sm max-w-sm mx-auto md:text-base md:max-w-md md:leading-7 md:mt-2 md:pb-0.5 lg:text-lg lg:leading-8 lg:pr-2 lg:mx-0" :class="{'animate-fade lg:origin-top-left' :animation}" x-text="crewMember.bio"></p>
+                <p class="text-blue text-15 leading-sm max-w-sm mx-auto md:text-base md:max-w-md md:leading-7 md:mt-2 md:pb-0.5 lg:text-lg lg:leading-8 lg:pr-2 lg:mx-0" :class="{'animate-fade lg:origin-top-left' : animation}" x-text="crewMember.bio"></p>
 
             </div>
         </div>

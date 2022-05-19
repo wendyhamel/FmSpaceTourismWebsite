@@ -108,17 +108,13 @@ window.spaceTravel = function () {
         ],
 
         destinationTab: 'Moon',
-        animation: false,
         crewTab: 'Commander',
+        techTab: 'Launch vehicle',
+        animation: false,
 
         get destination() {
             destinationArray = this.destinations.filter(destination => destination.name === this.destinationTab);
             return destinationArray[0];
-        },
-
-        animate() {
-            this.animation = true;
-            setTimeout(function() {this.animation = false}.bind(this) ,1000);
         },
 
         get crewMember() {
@@ -126,5 +122,14 @@ window.spaceTravel = function () {
             return crewMemberArray[0];
         },
 
+        get tech() {
+            techArray = this.technology.filter(tech => tech.name === this.techTab);
+            return techArray[0];
+        },
+
+        animate() {
+            this.animation = true;
+            setTimeout(function() {this.animation = false}.bind(this) ,1000);
+        },
     }
 }
