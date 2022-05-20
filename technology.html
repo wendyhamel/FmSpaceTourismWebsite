@@ -150,47 +150,36 @@
     </div>
 </header>
 
-    1
-    2
-    3
+<main class="relative md:mt-10 lg:max-w-7xl lg:pl-2 lg:ml-auto lg:mt-16 lg:h-full 2xl:mx-auto">
 
-    The terminology...
-    Space capsule
-
-    A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
-    capsule to reenter the Earth's atmosphere without wings. Our capsule is where
-    you'll spend your time during the flight. It includes a space gym, cinema,
-    and plenty of other activities to keep you entertained.
-<main class="relative md:mt-10 lg:max-w-6xl lg:mx-auto lg:mt-16 lg:h-full">
-
-    <h1 class="text-center text-white font-sub uppercase tracking-md leading-xxs md:text-left md:pl-6 md:text-xl md:tracking-lg md:leading-6 lg:text-28 lg:tracking-xl lg:leading-md lg:pl-8">
+    <h1 class="text-center text-white font-sub uppercase tracking-md leading-xxs md:text-left md:pl-6 md:text-xl md:tracking-lg md:leading-6 lg:text-28 lg:tracking-xl lg:leading-md lg:pl-0">
         <strong class="opacity-25 pr-[15px]">03</strong>Space launch 101
     </h1>
 
     <div
-            x-data="spaceTravel()"
-            class="mt-8 md:mt-16 md:flex md:flex-col-reverse md:gap-10 lg:mt-0 lg:ml-6 lg:gap-0"
+        x-data="spaceTravel()"
+        class="mt-8 md:mt-14 md:pt-1 lg:pt-0.5 lg:mt-6 lg:flex lg:flex-row-reverse lg:gap-4 lg:justify-between"
     >
-        <div class="border-b border-gray mx-6 mb-6 overflow-hidden md:mb-0 md:border-b-0 md:max-w-md md:mx-auto">
-            <img class="hidden object-contain lg:block" :class="{'animate-fade origin-bottom' : animation}" :src="tech.images.portrait" :alt="tech.name">
-            <img class="object-contain lg:hidden" :class="{'animate-fade origin-bottom' : animation}" :src="tech.images.landscape" :alt="tech.name">
+        <div class="mb-8 overflow-hidden md:mb-14 lg:mb-0 lg:pl-0.5 lg:shrink-0">
+            <img class="hidden object-contain lg:block" :class="{'animate-fade origin-right' : animation}" :src="tech.images.portrait" :alt="tech.name">
+            <img class="object-cover mx-auto h-[170px] md:h-[310px] lg:hidden" :class="{'animate-fade origin-bottom' : animation}" :src="tech.images.landscape" :alt="tech.name">
         </div>
-        <div class="md:flex md:flex-col-reverse lg:gap-20 lg:justify-between lg:relative lg:h-[620px]">
-            <nav class="pt-0.5 mb-6 lg:pt-0">
-                <ul class="flex justify-center gap-1 lg:gap-2 lg:justify-start">
-                    <li><button @click="animate; techTab = 'Commander'" class="block rounded-full w-2.5 h-2.5 bg-white opacity-[0.17] lg:w-[15px] lg:h-[15px] hover:opacity-50 ease-in-out duration-300" :class="{'opacity-100' : techTab === 'Launch vehicle'}">1</button></li>
-                    <li><button @click="animate; techTab = 'Mission Specialist'" class="block rounded-full w-2.5 h-2.5 bg-white opacity-[0.17] lg:w-[15px] lg:h-[15px] hover:opacity-50 ease-in-out duration-300" :class="{'opacity-100' : techTab === 'Space capsule'}">2</button></li>
-                    <li><button @click="animate; techTab = 'Pilot'" class="block rounded-full w-2.5 h-2.5 bg-white opacity-[0.17] lg:w-[15px] lg:h-[15px] hover:opacity-50 ease-in-out duration-300" :class="{'opacity-100' : techTab === 'Spaceport'}">3</button></li>
+        <div class="lg:flex lg:flex-row lg:justify-between lg:gap-14 lg:mt-20">
+            <nav class="py-0.5 mb-6 md:pt-0 md:mb-11 lg:py-0 lg:mb-0 lg:pr-1">
+                <ul class="flex justify-center gap-4 lg:flex-col lg:gap-8">
+                    <li><button type="button" @click="animate; techTab = 'Launch vehicle'" class="block rounded-full w-10 h-10 border border-white/25 text-white font-heading md:text-2xl md:w-[60px] md:h-[60px] lg:w-20 lg:h-20 lg:text-32 hover:border-white/100 ease-in-out duration-300" :class="{'bg-white text-dark' : techTab === 'Launch vehicle'}">1</button></li>
+                    <li><button type="button" @click="animate; techTab = 'Spaceport'" class="block rounded-full w-10 h-10 border border-white/25 text-white font-heading md:text-2xl md:w-[60px] md:h-[60px] lg:w-20 lg:h-20 lg:text-32 hover:border-white/100 ease-in-out duration-300" :class="{'bg-white text-dark' : techTab === 'Spaceport'}">2</button></li>
+                    <li><button type="button" @click="animate; techTab = 'Space capsule'" class="block rounded-full w-10 h-10 border border-white/25 text-white font-heading md:text-2xl md:w-[60px] md:h-[60px] lg:w-20 lg:h-20 lg:text-32 hover:border-white/100 ease-in-out duration-300" :class="{'bg-white text-dark' : techTab === 'Space capsule'}">3</button></li>
                 </ul>
             </nav>
 
-            <div class="text-center px-6 pb-14 md:pb-10 mx-auto lg:px-0 lg:text-left lg:mx-0">
-                <div class="grid gap-2 mb-4 lg:mt-36 lg:pt-2.5">
-                    <span class="text-white/50 font-heading uppercase leading-[18px] md:text-2xl md:leading-7 lg:text-32 lg:leading-[37px]">The terminology...</span>
-                    <h2 class="text-white font-heading uppercase text-2xl leading-7 md:text-40 md:leading-46 lg:text-56 lg:leading-65" :class="{'animate-fade lg:origin-top-left' : animation}" x-text="tech.name"></h2>
+            <div class="text-center px-6 pb-14 md:pb-10 mx-auto lg:mx-0 lg:text-left lg:px-0">
+                <div class="grid gap-2 mb-4 md:gap-4">
+                    <span class="text-blue font-sub uppercase text-sm tracking-sm leading-17 md:text-base md:tracking-19 md:leading-xxs">The terminology...</span>
+                    <h2 class="text-white font-heading uppercase text-2xl leading-7 md:text-40 md:leading-46 lg:text-56 lg:leading-65 lg:whitespace-no-wrap" :class="{'animate-fade lg:origin-left' : animation}" x-text="tech.name"></h2>
                 </div>
 
-                <p class="text-blue text-15 leading-sm max-w-sm mx-auto md:text-base md:max-w-md md:leading-7 md:mt-2 md:pb-0.5 lg:text-lg lg:leading-8 lg:pr-2 lg:mx-0" :class="{'animate-fade lg:origin-top-left' : animation}" x-text="tech.description"></p>
+                <p class="text-blue text-15 leading-sm max-w-sm mx-auto md:text-base md:max-w-md md:leading-7 md:pb-0.5 lg:text-lg lg:leading-8 lg:pr-2 lg:mx-0" :class="{'animate-fade lg:origin-left' : animation}" x-text="tech.description"></p>
 
             </div>
         </div>
